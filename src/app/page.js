@@ -9,6 +9,35 @@ const bodoni = Bodoni_Moda({
   preload: false,
 });
 export default function Home() {
+  const blogData = [
+    {
+      id: 1,
+      title: "Les défis de la PMA en France",
+      description: "Découvrez les défis rencontrés par les couples en parcours de PMA en France, ainsi que les solutions disponibles pour surmonter ces obstacles.",
+      nbrOfLike: 15,
+      isMale: true,
+      isFemale: true,
+      keywords: ["PMA", "France", "Fertilité"],
+    },
+    {
+      id: 2,
+      title: "L'impact psychologique de l'infertilité chez les hommes",
+      description: "Une exploration des effets psychologiques de l'infertilité sur les hommes et des moyens pour trouver du soutien et surmonter ces défis.",
+      nbrOfLike: 25,
+      isMale: true,
+      isFemale: false,
+      keywords: ["Infertilité", "Psychologie", "Support"],
+    },
+    {
+      id: 3,
+      title: "Adopter en Martinique : Le processus expliqué",
+      description: "Un guide détaillé sur le processus d'adoption en Martinique, incluant les étapes, les défis et les ressources disponibles pour les futurs parents.",
+      nbrOfLike: 30,
+      isMale: false,
+      isFemale: true,
+      keywords: ["Adoption", "Martinique", "Famille"],
+    }
+  ];
   return (
     <>
       <Navbar />
@@ -17,7 +46,7 @@ export default function Home() {
           <div className="w-fit">
             <div className="flex flex-row justify-center lg:justify-start items-center w-full p-4">
               <Image src={"/images/logo.png"} width={100} height={100} />
-              <p>A Safe Place</p>
+              <p>FertiKozé</p>
             </div>
             <h1
               className={
@@ -29,7 +58,7 @@ export default function Home() {
           </div>
           <Button>S'inscrire à la newsletter</Button>
         </div>
-        <ContainerBlogAccueil />
+        <ContainerBlogAccueil blogData={blogData} />
       </main>
       <Footer/>
     </>

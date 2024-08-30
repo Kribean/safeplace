@@ -21,10 +21,10 @@ const bodoni = Bodoni_Moda({
 });
 export const Navbar = () => {
   return (
-    <div className="flex w-full fixed top-0 left-0 bg-red-200 p-4">
+    <div className="flex flex-row justify-between w-full fixed top-0 left-0 bg-red-200 p-4 z-50">
       <nav className="flex flex-row justify-between ">
         <Link href="/">
-          <Button className={bodoni.className}>A Safe Place</Button>
+          <Button className={bodoni.className}>FertiKozé</Button>
         </Link>
       </nav>
       <Sheet>
@@ -35,28 +35,27 @@ export const Navbar = () => {
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>Edit profile</SheetTitle>
+            <SheetTitle>Menu</SheetTitle>
             <SheetDescription>
-              Make changes to your profile here. Click save when you're done.
+              Bienvenue sur FertiKozé.
             </SheetDescription>
           </SheetHeader>
           <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="name" className="text-right">
-                Name
-              </Label>
-              <Input id="name" value="Pedro Duarte" className="col-span-3" />
+            <div className="flex flex-row items-center gap-4">
+              <Link href={"/blog"}>
+              <Button>Blog</Button>
+              </Link>
             </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="username" className="text-right">
-                Username
-              </Label>
-              <Input id="username" value="@peduarte" className="col-span-3" />
+            <div className="flex flex-row items-center gap-4">
+            <Button>S'inscrire à la mailing list</Button>
+            </div>
+            <div className="flex flex-row items-center gap-4">
+            <Button>Se Connecter</Button>
             </div>
           </div>
           <SheetFooter>
             <SheetClose asChild>
-              <Button type="submit">Save changes</Button>
+              <Button >Nous contacter</Button>
             </SheetClose>
           </SheetFooter>
         </SheetContent>

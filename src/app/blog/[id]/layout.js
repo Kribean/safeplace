@@ -1,5 +1,4 @@
 import { Montserrat } from "next/font/google";
-import "./globals.css";
 
 const monserrat = Montserrat({ subsets: ["latin"] });
 
@@ -18,12 +17,10 @@ export const metadata = {
   twitterCard: "summary_large_image", // Type de carte Twitter à afficher
   //twitterSite: "@votre_compte_twitter", // Votre nom d'utilisateur Twitter
 };
-export default function RootLayout({ children }) {
+export default function BlogLayout({ children }) {
   return (
-    <html lang="fr">
-      <body className={monserrat.className}>
+      <section className={monserrat.className}>
           {children}
-        </body>
-    </html>
+        </section>
   );
 }

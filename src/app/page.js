@@ -2,12 +2,9 @@ import { Footer } from "@/components/mine/Footer";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ContainerBlogAccueil } from "@/components/ui/ContainerBlogAccueil";
-import { Bodoni_Moda } from "next/font/google";
 import Image from "next/image";
-const bodoni = Bodoni_Moda({
-  weight: "400",
-  preload: false,
-});
+import "./globals.css"
+
 export default function Home() {
   const blogData = [
     {
@@ -50,7 +47,7 @@ export default function Home() {
             </div>
             <h1
               className={
-                "text-6xl font-extrabold text-center " + bodoni.className
+                "text-6xl font-extrabold text-center protest-guerrilla-regular"
               }
             >
               Soutenir les couples confrontés aux défis de la fertilité

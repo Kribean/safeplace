@@ -1,7 +1,5 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card"
-import { Label } from "@radix-ui/react-label"
-import { Input } from "../ui/input"
-import { Button } from "../ui/button"
+import { v4 as uuidv4 } from 'uuid';
 import { Badge } from "../ui/badge"
 import { Heart } from "lucide-react"
 import Image from "next/image"
@@ -19,8 +17,8 @@ export const CardBlog = ({id,title,description,nbrOfLike,isMale,isFemale,keyword
         <div className="flex flex-wrap gap-0.5 lg:gap-2">
         {isMale&&  <Badge variant="outline"><Image src={"/images/male.svg"} width={16} height={16} className="lg:h-8 lg:w-8" /></Badge>}
          {isFemale&& <Badge variant="outline"><Image src={"/images/female.svg"} width={16} height={16} className="lg:h-8 lg:w-8" /></Badge>}
-         {keywords.map((e,index)=>{
-            <Badge key={index} variant="outline" className={"break-all text-xs"}>{e}</Badge>
+         {keywords.map((e)=>{
+           return <Badge key={uuidv4()} variant="outline" className={"break-all text-xs"}>{e}</Badge>
          }) }
           </div>
         </CardContent>

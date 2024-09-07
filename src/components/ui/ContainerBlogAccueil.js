@@ -1,11 +1,12 @@
 import { Button } from "./button";
 import { CardBlog } from "../mine/CardBlog";
 import Image from "next/image";
+import { v4 as uuidv4 } from 'uuid';
 
 export const ContainerBlogAccueil = async ({blogData}) => {
 
   return (
-    <diV className="container gap-4 flex flex-col items-center pt-4  ">
+    <div className="container gap-4 flex flex-col items-center pt-4  ">
       <h2 className="text-2xl">Nos articles les plus récents</h2>
       <div className="flex flex-wrap lg:flex-row justify-center gap-4">
         <Button><Image src={"/images/female.svg"} width={16} height={16} className="lg:h-8 lg:w-8" />
@@ -22,8 +23,9 @@ export const ContainerBlogAccueil = async ({blogData}) => {
       </div>
 
       <div className="flex flex-wrap justify-center gap-0.5">
-       {blogData?.map((e,index)=>{
+       {blogData?.map((e)=>{
         return <CardBlog 
+        key={uuidv4()}
         id={e.id} 
         title={e.title}
         description={e.description}
@@ -33,6 +35,6 @@ export const ContainerBlogAccueil = async ({blogData}) => {
         keywords={e.keywords} />
        })}
       </div>
-    </diV>
+    </div>
   );
 };

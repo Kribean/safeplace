@@ -1,14 +1,7 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { Bodoni_Moda } from "next/font/google";
 import { SearchBar } from "@/components/mine/SearchBar";
-import { ContainerBlogAccueil } from "@/components/ui/ContainerBlogAccueil";
 import { ContainerAllBlogCard } from "@/components/ui/ContainerAllBlogCard";
 import { Separator } from "@radix-ui/react-separator";
-const bodoni = Bodoni_Moda({
-  weight: "400",
-  preload: false,
-});
+
 const AllBlogs = () => {
   const blogData = [
     {

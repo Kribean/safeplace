@@ -12,32 +12,36 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
-import { signIn, useSession } from "next-auth/react"
+import { signIn, useSession,signOut } from "next-auth/react"
 import Link from "next/link";
+import Image from "next/image";
 
 export const Navbar = () => {
 
     const {data:session}=useSession();
     const handleLogin=()=>{
         signIn("google",{ callbackUrl: "/" })
-    
-
+    }
+    const handleLogout=()=>{
+      signOut();
     }
   return (
     <div className="flex flex-row justify-between w-full fixed top-0 left-0 bg-red-200 p-4 z-50">
       <nav className="flex flex-row justify-between ">
         <Link href="/">
-          <Button className={"bodoni text-lg"}>FertiKozé</Button>
+          <Button variant="accent" className={"bodoni text-lg border"}>
+          <Image src={"/images/logo_fertikoze.svg"} width={50} height={50} alt="FertiKoze" />
+            FertiKozé</Button>
         </Link>
       </nav>
       <div className="lg:flex flex-row gap-2 w-full justify-end lg: hidden ">
-      {session?.user?<Button variant="destructive" onClick={()=>{}}>Se Déconnecter</Button>
+      {session?.user?<Button variant="destructive" onClick={()=>{handleLogout()}}>Se Déconnecter</Button>
             :<Button  onClick={()=>{handleLogin()}}>Se Connecter</Button>
             }
-      <Avatar >
+     {session?.user?.image && <Avatar >
   <AvatarImage src={session?.user?.image} alt="image utilisateur" className="w-10 h-10 rounded-full" />
   <AvatarFallback>avatar</AvatarFallback>
-</Avatar>
+</Avatar>}
       </div>
 <div className="block lg:hidden">
 <Sheet>
@@ -70,7 +74,7 @@ export const Navbar = () => {
             <Button>S'inscrire à la mailing list</Button>
             </div>
             <div className="flex flex-row items-center gap-4">
-            {session?.user?<Button variant="destructive" onClick={()=>{}}>Se Déconnecter</Button>
+            {session?.user?<Button variant="destructive" onClick={()=>{handleLogout()}}>Se Déconnecter</Button>
             :<Button  onClick={()=>{handleLogin()}}>Se Connecter</Button>
             }
             </div>

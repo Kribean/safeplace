@@ -42,7 +42,7 @@ export default function Home() {
         <div className="flex flex-col h-screen bg-gradient-to-r from-red-200 via-red-200 to-red-300 w-full justify-center items-center">
           <div className="w-fit">
             <div className="flex flex-row justify-center lg:justify-start items-center w-full p-4">
-              <Image src={"/images/logo.png"} width={100} height={100} />
+              <Image src={"/images/logo_fertikoze.svg"} width={200} height={200} />
               <p>FertiKozé</p>
             </div>
             <h1

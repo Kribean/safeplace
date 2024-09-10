@@ -15,8 +15,8 @@ export const CardBlog = ({id,title,description,nbrOfLike,isMale,isFemale,keyword
         </CardHeader>
         <CardContent>
         <div className="flex flex-wrap gap-0.5 lg:gap-2">
-        {isMale&&  <Badge variant="outline"><Image src={"/images/male.svg"} width={16} height={16} className="lg:h-8 lg:w-8" /></Badge>}
-         {isFemale&& <Badge variant="outline"><Image src={"/images/female.svg"} width={16} height={16} className="lg:h-8 lg:w-8" /></Badge>}
+        {isMale&&  <Badge variant="outline"><Image src={"/images/male.svg"} width={16} height={16} className="lg:h-8 lg:w-8" alt="symbole homme" /></Badge>}
+         {isFemale&& <Badge variant="outline"><Image src={"/images/female.svg"} width={16} height={16} className="lg:h-8 lg:w-8" alt="symbole femme" /></Badge>}
          {keywords.map((e)=>{
            return <Badge key={uuidv4()} variant="outline" className={"break-all text-xs"}>{e}</Badge>
          }) }

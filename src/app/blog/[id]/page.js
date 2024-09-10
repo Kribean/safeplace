@@ -61,7 +61,7 @@ const tabComments = [
 </div>
 <h1 className="text-6xl font-extrabold">Les défis de la PMA en France</h1>
 <div className="w-full h-[500px] flex flex-row justify-center">
-<Image src={"/images/family-photo.png"} height={400} width={800} className="object-cover"/>
+<Image src={"/images/family-photo.png"} height={400} width={800} className="object-cover" alt="illustration famille"/>
 </div>
 <div dangerouslySetInnerHTML={{ __html: text }}/>
 <ContainerComments tabComments={tabComments}/>

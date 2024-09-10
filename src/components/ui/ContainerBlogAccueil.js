@@ -9,17 +9,17 @@ export const ContainerBlogAccueil = async ({blogData}) => {
     <div className="container gap-4 flex flex-col items-center pt-4  ">
       <h2 className="text-2xl">Nos articles les plus récents</h2>
       <div className="flex flex-wrap lg:flex-row justify-center gap-4">
-        <Button><Image src={"/images/female.svg"} width={16} height={16} className="lg:h-8 lg:w-8" />
+        <Button><Image alt="symbole femme" src={"/images/female.svg"} width={16} height={16} className="lg:h-8 lg:w-8" />
         <p className="hidden lg:block">Dédiés aux femmes</p>
         </Button>
-        <Button><Image src={"/images/female.svg"} width={16} height={16} className="lg:h-8 lg:w-8" />
+        <Button><Image alt="symbole femme" src={"/images/female.svg"} width={16} height={16} className="lg:h-8 lg:w-8" />
         <p className="hidden lg:block">Tous les articles
-          </p><Image src={"/images/male.svg"} width={16} height={16} className="lg:h-8 lg:w-8" /></Button>
+          </p><Image src={"/images/male.svg"} width={16} height={16} className="lg:h-8 lg:w-8" alt="symbole homme" /></Button>
         <Button>
         <p className="hidden lg:block">
           Dédiés aux hommes
           </p>
-          <Image src={"/images/male.svg"} width={16} height={16} className="lg:h-8 lg:w-8" /></Button>
+          <Image src={"/images/male.svg"} width={16} height={16} className="lg:h-8 lg:w-8" alt="symbole homme"/></Button>
       </div>
 
       <div className="flex flex-wrap justify-center gap-0.5">

@@ -1,6 +1,6 @@
 import { ContainerAllBlogCard } from "@/components/ui/ContainerAllBlogCard";
 import { Separator } from "@radix-ui/react-separator";
-
+import prisma from "@/lib/prisma";
 const AllBlogs = async () => {
   const articles = await prisma.article.findMany({
     select: {

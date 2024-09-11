@@ -28,7 +28,7 @@ export function NavMenuComp() {
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
+                    href="/blog"
                   >
                     <Image src={"/images/logo_fertikoze.svg"} width={200} height={200} alt="logo fertikoze" />
                     <div className="mb-2 mt-4 text-lg font-medium">
@@ -40,10 +40,10 @@ export function NavMenuComp() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/" title="Dédiés aux femmmes">
+              <ListItem href="/blog?type=women" title="Dédiés aux femmmes">
               Découvrez la section blog spécialement dédiée aux femmes.
               </ListItem>
-              <ListItem href="/" title="Dédiés aux hommes">
+              <ListItem href="/blog?type=men" title="Dédiés aux hommes">
               Découvrez la section blog spécialement dédiée aux femmes.
               </ListItem>
               <ListItem href="https://forms.gle/uryyRBa27KM3zjfi7" target="_blank" rel="noopener noreferrer" title="Votre expérience avec la PMA">

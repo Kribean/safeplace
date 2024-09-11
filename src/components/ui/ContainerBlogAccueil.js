@@ -28,11 +28,13 @@ export const ContainerBlogAccueil = async ({blogData}) => {
         key={uuidv4()}
         id={e.id} 
         title={e.title}
-        description={e.description}
-        nbrOfLike={e.nbrOfLike} 
-        isMale={e.isMale} 
-        isFemale={e.isFemale} 
-        keywords={e.keywords} />
+        description={e.summary}
+        nbrOfLike={e.likes} 
+        isMale={e.isForMale} 
+        isFemale={e.isForFemale} 
+        keywords={e.keywords} 
+        numberOfComments={e.numberOfComments}
+        thematic={e.thematic}/>
        })}
       </div>
     </div>

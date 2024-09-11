@@ -4,37 +4,27 @@ import { Button } from "@/components/ui/button";
 import { ContainerBlogAccueil } from "@/components/ui/ContainerBlogAccueil";
 import Image from "next/image";
 import "./globals.css"
+import prisma from "@/lib/prisma";
 
-export default function Home() {
-  const blogData = [
-    {
-      id: 1,
-      title: "Les défis de la PMA en France",
-      description: "Découvrez les défis rencontrés par les couples en parcours de PMA en France, ainsi que les solutions disponibles pour surmonter ces obstacles.",
-      nbrOfLike: 15,
-      isMale: true,
-      isFemale: true,
-      keywords: ["PMA", "France", "Fertilité"],
+export default async function Home() {
+  const articles = await prisma.article.findMany({
+    select: {
+      id: true,
+      title: true,
+      summary: true,
+      likes: true,
+      numberOfComments: true,
+      keywords: true,
+      isForMale: true,
+      isForFemale: true,
+      thematic: true
     },
-    {
-      id: 2,
-      title: "L'impact psychologique de l'infertilité chez les hommes",
-      description: "Une exploration des effets psychologiques de l'infertilité sur les hommes et des moyens pour trouver du soutien et surmonter ces défis.",
-      nbrOfLike: 25,
-      isMale: true,
-      isFemale: false,
-      keywords: ["Infertilité", "Psychologie", "Support"],
+    take: 3, // Récupère les 3 premiers articles
+    orderBy: {
+      createdAt: 'desc', // Trie par ordre décroissant (du plus récent au plus ancien)
     },
-    {
-      id: 3,
-      title: "Adopter en Martinique : Le processus expliqué",
-      description: "Un guide détaillé sur le processus d'adoption en Martinique, incluant les étapes, les défis et les ressources disponibles pour les futurs parents.",
-      nbrOfLike: 30,
-      isMale: false,
-      isFemale: true,
-      keywords: ["Adoption", "Martinique", "Famille"],
-    }
-  ];
+  });
+
   return (
     <>
       <Navbar />
@@ -55,7 +45,7 @@ export default function Home() {
           </div>
           <Button>S'inscrire à la newsletter</Button>
         </div>
-        <ContainerBlogAccueil blogData={blogData} />
+        <ContainerBlogAccueil blogData={articles} />
       </main>
       <Footer/>
     </>

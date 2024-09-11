@@ -50,7 +50,7 @@ export default function Home() {
                 "text-4xl lg:text-6xl font-extrabold text-center protest-guerrilla-regular mx-2"
               }
             >
-              Soutenir les couples confrontés aux défis de la fertilité
+              Soutenir les couples confrontés aux défis de la conception
             </h1>
           </div>
           <Button>S'inscrire à la newsletter</Button>

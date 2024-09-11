@@ -42,12 +42,12 @@ export default function Home() {
         <div className="flex flex-col h-screen bg-gradient-to-r from-red-200 via-red-200 to-red-300 w-full justify-center items-center">
           <div className="w-fit">
             <div className="flex flex-row justify-center lg:justify-start items-center w-full p-4">
-              <Image src={"/images/logo_fertikoze.svg"} width={200} height={200} />
+              <Image src={"/images/logo_fertikoze.svg"} width={200} height={200} alt="logo fertikoze" />
               <p>FertiKozé</p>
             </div>
             <h1
               className={
-                "text-6xl font-extrabold text-center protest-guerrilla-regular"
+                "text-4xl lg:text-6xl font-extrabold text-center protest-guerrilla-regular mx-2"
               }
             >
               Soutenir les couples confrontés aux défis de la fertilité

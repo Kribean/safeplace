@@ -46,6 +46,9 @@ export function NavMenuComp() {
               <ListItem href="/" title="Dédiés aux hommes">
               Découvrez la section blog spécialement dédiée aux femmes.
               </ListItem>
+              <ListItem href="https://forms.gle/uryyRBa27KM3zjfi7" target="_blank" rel="noopener noreferrer" title="Votre expérience avec la PMA">
+              Votre expérience pourrait être une précieuse source d’inspiration pour d’autres couples ! Nous vous garantissons l'anonymat et nous nous occuperons de la mise en forme de votre texte pour qu'il s'intègre parfaitement à notre blog.
+              </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -53,13 +56,13 @@ export function NavMenuComp() {
           <NavigationMenuTrigger>À propos</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[600px] ">
-            <ListItem href="/" title="Qui sommes-nous">
+            <ListItem href="/qui-sommes-nous" title="Qui sommes-nous">
               Découvrez les fondateurs de Fertikoze
               </ListItem>
-              <ListItem href="/" title="Protection des données - RGPD">
+              <ListItem href="/rgpd" title="Protection des données - RGPD">
               Informations sur comment le site gère les données
               </ListItem>
-              <ListItem href="#" title="Envoyer un mail" />
+              <ListItem href="https://forms.gle/F68eNmonoA8wgEQF9" target="_blank" rel="noopener noreferrer" title="Envoyer un mail" />
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

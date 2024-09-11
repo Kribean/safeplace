@@ -22,7 +22,7 @@ export const ContainerBlogAccueil = async ({blogData}) => {
           <Image src={"/images/male.svg"} width={16} height={16} className="lg:h-8 lg:w-8" alt="symbole homme"/></Button>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-0.5">
+      <div className="flex flex-wrap justify-center gap-4">
        {blogData?.map((e)=>{
         return <CardBlog 
         key={uuidv4()}

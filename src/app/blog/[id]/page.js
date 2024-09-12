@@ -1,5 +1,6 @@
 import { ContainerComments } from "@/components/mine/ContainerComments";
 import Image from "next/image";
+import prisma from "@/lib/prisma";
 
 const Blog = async({ params }) => {
   const { id } = params;

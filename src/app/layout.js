@@ -22,7 +22,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
       <body className={monserrat.className}>
         <AuthProvider>
         {children}

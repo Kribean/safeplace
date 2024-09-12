@@ -4,7 +4,6 @@ import { NextResponse } from "next/server";
 const prisma = new PrismaClient();
 
 export async function GET(req, res) {
-  console.log(req);
   try {
     // Extraire les paramètres de requête via req.url
     const { searchParams } = new URL(req.url, `http://${req.headers.host}`);

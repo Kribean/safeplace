@@ -4,10 +4,10 @@ import { NextResponse } from 'next/server';
 const prisma = new PrismaClient();
 
 export async function GET(req, { params }) {
-    console.log(params,": params")
+    
     try {
       const { id } = params; // Utiliser req.query pour récupérer les paramètres dynamiques
-  console.log(params,": params")
+
       if (!id) {
         return NextResponse.json({ error: "ID manquant" }, { status: 400 });
       }

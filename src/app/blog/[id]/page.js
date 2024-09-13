@@ -1,14 +1,14 @@
-import { ContainerComments } from "@/components/mine/ContainerComments";
 import Image from "next/image";
 import prisma from "@/lib/prisma";
+import { ContainerAllowArticle } from "@/components/mine/ContainerAllowArticle";
 
-const Blog = async({ params }) => {
+const Blog = async ({ params }) => {
   const { id } = params;
   const result = await prisma.article.findUnique({
     where: {
-      id ,
+      id,
     },
-    select:{
+    select: {
       id: true,
       title: true,
       summary: true,
@@ -18,32 +18,43 @@ const Blog = async({ params }) => {
       isForMale: true,
       isForFemale: true,
       thematic: true,
-      createdAt:true,
-      comments:true,
-      author:true,
-      content:true
-    }
-  })
+      createdAt: true,
+      comments: true,
+      author: true,
+      content: true,
+    },
+  });
 
-    return (
-      <main className="container flex min-h-screen flex-col items-center gap-4 w-full pb-4 pt-[100px]">
-<div className="flex flex-col justify-start items-start w-full">
-<p className="text-md">{new Date(result.createdAt).toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' })}</p>
-<p className="text-md">Pseudonyme: {result.author||"Anonyme972"} </p>
-</div>
-<h1 className="text-6xl font-extrabold">{result.title}</h1>
-<div className="w-full h-[500px] flex flex-row justify-center">
-<Image src={"/images/family-photo.png"} height={400} width={800} className="object-cover" alt="illustration famille"/>
-</div>
-<article>
-  <aside>
-    <p>{result.summary}</p>
-  </aside>
-</article>
-<div dangerouslySetInnerHTML={{ __html: result.content }}/>
-<ContainerComments idArticle={id} tabComments={result.comments}/>
-      </main>
-    );
-  };
-  
-  export default Blog;
+  return (
+    <main className="container flex min-h-screen flex-col items-center gap-4 w-full pb-4 pt-[100px]">
+      <div className="flex flex-col justify-start items-start w-full">
+        <p className="text-md">
+          {new Date(result.createdAt).toLocaleDateString("fr-FR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+          })}
+        </p>
+        <p className="text-md">Pseudonyme: {result.author || "Anonyme972"} </p>
+      </div>
+      <h1 className="text-6xl font-extrabold">{result.title}</h1>
+      <div className="w-full h-[500px] flex flex-row justify-center">
+        <Image
+          src={"/images/family-photo.png"}
+          height={400}
+          width={800}
+          className="object-cover"
+          alt="illustration famille"
+        />
+      </div>
+      <article>
+        <aside>
+          <p>{result.summary}</p>
+        </aside>
+      </article>
+      <ContainerAllowArticle id={id} result={result} />
+    </main>
+  );
+};
+
+export default Blog;

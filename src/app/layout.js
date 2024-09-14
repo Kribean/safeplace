@@ -8,7 +8,7 @@ export const metadata = {
   title: "FertiKozé - Support et Partage pour les Couples",
   description: "FertiKozé est une plateforme dédiée aux couples hétérosexuels ayant des difficultés à concevoir un enfant. Échangez vos expériences, trouvez du soutien, et connectez-vous avec d'autres couples dans un espace sécurisé et bienveillant.",
   keywords: "infertilité, conception, soutien aux couples, fertilité, témoignages, communauté, aide à la conception",
-  author: "Nom de votre équipe ou entreprise",
+  author: "Fertikizé",
   robots: "index, follow", // Permet aux moteurs de recherche d'indexer la page
   charset: "UTF-8", // Encodage des caractères
   language: "fr", // Langue principale de la page

@@ -76,10 +76,10 @@ export const CardBlog = ({
           </div>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Badge variant="outline">
+          {/** à mettre lorsqu il y aura la fonctionnalité like <Badge variant="outline">
             <Heart />
             {nbrOfLike}
-          </Badge>
+          </Badge>*/}
           <Badge variant="outline">
             <MessageSquareMore />
             {numberOfComments}

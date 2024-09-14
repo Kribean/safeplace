@@ -33,7 +33,7 @@ export const ContainerBlogAccueil = async ({blogData}) => {
         isMale={e.isForMale} 
         isFemale={e.isForFemale} 
         keywords={e.keywords} 
-        numberOfComments={e.numberOfComments}
+        numberOfComments={e.comments.length}
         thematic={e.thematic}/>
        })}
       </div>

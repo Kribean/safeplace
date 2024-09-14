@@ -12,7 +12,8 @@ const AllBlogs = async () => {
       keywords: true,
       isForMale: true,
       isForFemale: true,
-      thematic: true
+      thematic: true,
+      comments: true
     },
     orderBy: {
       createdAt: 'desc', // Trie par ordre décroissant (du plus récent au plus ancien)

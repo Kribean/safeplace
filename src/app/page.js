@@ -17,7 +17,8 @@ export default async function Home() {
       keywords: true,
       isForMale: true,
       isForFemale: true,
-      thematic: true
+      thematic: true,
+      comments:true
     },
     take: 3, // Récupère les 3 premiers articles
     orderBy: {

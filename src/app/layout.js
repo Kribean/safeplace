@@ -1,9 +1,15 @@
-import { Montserrat } from "next/font/google";
+import { Montserrat,Bodoni_Moda } from "next/font/google";
 import "./globals.css";
 import AuthProvider from "../../providers/auth-providers";
 
 const monserrat = Montserrat({ subsets: ["latin"] });
+const bodoniModa = Bodoni_Moda({
+  weight: ['400', '700'], // Poids disponibles
+  subsets: ['latin'],
+  display: 'swap',
+});
 
+export { monserrat, bodoniModa };
 export const metadata = {
   title: "FertiKozé - Support et Partage pour les Couples",
   description: "FertiKozé est une plateforme dédiée aux couples hétérosexuels ayant des difficultés à concevoir un enfant. Échangez vos expériences, trouvez du soutien, et connectez-vous avec d'autres couples dans un espace sécurisé et bienveillant.",

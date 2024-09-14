@@ -1,7 +1,7 @@
 import Image from "next/image";
 import prisma from "@/lib/prisma";
 import { ContainerAllowArticle } from "@/components/mine/ContainerAllowArticle";
-
+import { bodoniModa } from "@/app/layout";
 const Blog = async ({ params }) => {
   const { id } = params;
   const result = await prisma.article.findUnique({
@@ -37,7 +37,7 @@ const Blog = async ({ params }) => {
         </p>
         <p className="text-md">Pseudonyme: {result.author || "Anonyme972"} </p>
       </div>
-      <h1 className="text-6xl font-extrabold">{result.title}</h1>
+      <h1 className={bodoniModa.className+" text-6xl font-extrabold "}>{result.title}</h1>
       <div className="w-full h-[500px] flex flex-row justify-center">
         <Image
           src={"/images/family-photo.png"}

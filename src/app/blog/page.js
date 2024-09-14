@@ -1,6 +1,8 @@
 import { ContainerAllBlogCard } from "@/components/ui/ContainerAllBlogCard";
 import { Separator } from "@radix-ui/react-separator";
 import prisma from "@/lib/prisma";
+import { bodoniModa } from "../layout";
+
 const AllBlogs = async () => {
   const articles = await prisma.article.findMany({
     select: {
@@ -23,7 +25,7 @@ const AllBlogs = async () => {
     <>
       <div className="flex min-h-screen flex-col justify-start w-full pb-4 mt-[100px]">
         <div className="flex flex-row pt-4 pb-[100px] items-center justify-center">
-          <h1 className="text-2xl lg:text-6xl">Fertikozé: Blog</h1>
+          <h1 className={bodoniModa.className+" text-2xl lg:text-6xl "}>Fertikozé: Blog</h1>
           <Separator />
         </div>
         <ContainerAllBlogCard blogData={articles}>

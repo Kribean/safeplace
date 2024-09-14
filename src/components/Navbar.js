@@ -17,6 +17,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { NavMenuComp } from "./mine/NavMenuComp";
 import { NavMenuSmallScreenComp } from "./mine/NavMenuSmallScreenComp";
+import "../app/globals.css"
+
 
 export const Navbar = () => {
   const { data: session } = useSession();
@@ -143,6 +145,7 @@ export const Navbar = () => {
               width={50}
               height={50}
               alt="FertiKoze"
+              className={"font-bodoni"}
             />
             FertiKozé
           </Button>

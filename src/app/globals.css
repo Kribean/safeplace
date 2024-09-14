@@ -68,3 +68,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/font/bodoniMo.ttf') format('truetype');
+}
+
+/* Appliquer la police dans une classe */
+.font-bodoni {
+  font-family: 'Bodoni Moda', sans-serif; /* Remplacer 'Roboto' par 'Bodoni Moda' */
+}

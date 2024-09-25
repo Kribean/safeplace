@@ -23,7 +23,7 @@ export const CardBlog = ({
   thematic,
 }) => {
   return (
-    <Card className="w-[150px] lg:w-[350px] bg-white shadow-md transition-all ease-in-out duration-300 hover:shadow-xl">
+    <Card className="w-full lg:w-[350px] bg-white shadow-md transition-all ease-in-out duration-300 hover:shadow-xl">
       <Link href={"/blog/" + id}>
         <CardHeader>
           <CardTitle className={"text-sm lg:text-xl break-all"}>

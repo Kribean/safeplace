@@ -44,7 +44,7 @@ export function NavMenuComp() {
               Découvrez la section blog spécialement dédiée aux femmes.
               </ListItem>
               <ListItem href="/blog?type=men" title="Dédiés aux hommes">
-              Découvrez la section blog spécialement dédiée aux femmes.
+              Découvrez la section blog spécialement dédiée aux hommes.
               </ListItem>
               <ListItem href="https://forms.gle/uryyRBa27KM3zjfi7" target="_blank" rel="noopener noreferrer" title="Votre expérience avec la PMA">
               Votre expérience pourrait être une précieuse source d’inspiration pour d’autres couples ! Nous vous garantissons l'anonymat et nous nous occuperons de la mise en forme de votre texte pour qu'il s'intègre parfaitement à notre blog.
